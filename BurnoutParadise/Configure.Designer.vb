@@ -96,7 +96,8 @@ Partial Class Configure
         '
         'OpenFileDialog1
         '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        Me.OpenFileDialog1.FileName = "EXE Files (.exe)"
+        Me.OpenFileDialog1.Tag = "EXE Files (.exe)"
         '
         'Button1
         '
@@ -129,7 +130,8 @@ Partial Class Configure
         '
         'OpenFileDialog2
         '
-        Me.OpenFileDialog2.FileName = "OpenFileDialog2"
+        Me.OpenFileDialog2.FileName = "EXE Files (.exe)"
+        Me.OpenFileDialog2.Tag = "EXE Files (.exe)"
         '
         'Configure
         '

@@ -1,4 +1,5 @@
-﻿Imports System.Runtime.InteropServices
+﻿Imports System.IO
+Imports System.Runtime.InteropServices
 Imports System.Text
 
 Module INIHelper
@@ -29,6 +30,8 @@ Public Class Configure
     End Sub
 
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
+        My.Computer.Audio.Play("C:\Users\jebob\Desktop\Code Projects\burnout-paradise-fansite-kit\Audio\BackSound.wav",
+    AudioPlayMode.Background)
         Me.Close()
     End Sub
     Private Sub OpenFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialog1.FileOk
@@ -44,6 +47,34 @@ Public Class Configure
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        OpenFileDialog1.ShowDialog()
+        Dim myStream As Stream = Nothing
+        OpenFileDialog1.InitialDirectory = "c:\"
+        OpenFileDialog1.Filter = "Program Files (*.exe, *.lnk)|*.exe ,*.lnk|All files (*.*)|*.*"
+        OpenFileDialog1.FilterIndex = 2
+        OpenFileDialog1.RestoreDirectory = True
+
+        If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+            Try
+                myStream = OpenFileDialog1.OpenFile()
+                If (myStream IsNot Nothing) Then
+                    UsernameTextBox.Text = OpenFileDialog1.FileName()
+                End If
+            Catch Ex As Exception
+                MsgBox("Cannot read file! Error 1", vbMsgBoxHelp)
+            Finally
+                ' Check this again, since we need to make sure we didn't throw an exception on open.
+                If (myStream IsNot Nothing) Then
+                    myStream.Close()
+                End If
+            End Try
+        End If
+
     End Sub
+
+    Private Sub Configure_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    End Sub
+End Class
+Public Class GlobalVariables
+    Public Shared ConfClose As Integer = 0
+    Public Shared SelectSound As String
 End Class

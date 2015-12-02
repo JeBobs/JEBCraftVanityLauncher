@@ -17,7 +17,7 @@
     <PublishUrl>C:\Users\jebob\Desktop\Code Projects\burnout-paradise-vanity-launcher\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
@@ -28,7 +28,7 @@
     <PublisherName>JEBCraft Studios</PublisherName>
     <SuiteName>Vanity Pack</SuiteName>
     <MinimumRequiredVersion>0.1.0001.3</MinimumRequiredVersion>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>0.1.0001.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -194,9 +194,12 @@
     <Content Include="Burnout Textsel.cur" />
     <Content Include="Burnout WHITE.cur" />
     <Content Include="Hunter.ico" />
+    <Content Include="Resources\BackSound.wav" />
+    <Content Include="Resources\OkBackSounds.mp3" />
     <None Include="Resources\11.jpg" />
     <None Include="Resources\7.jpg" />
     <None Include="Resources\1.jpg" />
+    <None Include="Resources\Background.png" />
     <Content Include="Resources\Burnout BLUE.cur" />
     <Content Include="Resources\Burnout Busy.cur" />
     <Content Include="Resources\Burnout Busy2.cur" />
