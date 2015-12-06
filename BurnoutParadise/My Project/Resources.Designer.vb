@@ -83,6 +83,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _25() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("25", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property _7() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("7", resourceCulture)
@@ -106,6 +116,16 @@ Namespace My.Resources
         Friend ReadOnly Property Burnout_Paradise_on_white_hi_res() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Burnout_Paradise_on_white_hi_res", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property CrashingError() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("CrashingError", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

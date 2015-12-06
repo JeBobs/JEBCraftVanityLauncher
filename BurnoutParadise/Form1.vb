@@ -5,24 +5,40 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If GlobalVariables.ConfClose = 1 Then
-            My.Computer.Audio.Play("C:\Users\jebob\Desktop\Code Projects\burnout-paradise-fansite-kit\Audio\BackSound.wav",
-                    AudioPlayMode.Background)
+        If File.Exists(LocVars.VPTestLocation) Then
+            LocVars.VPLocation = (LocVars.VPTestLocation)
         End If
+        'If GlobalVariables.ConfClose = 1 Then
+        '  My.Computer.Audio.Play("C:\Users\jebob\Desktop\Code Projects\burnout-paradise-fansite-kit\Audio\BackSound.wav",
+        ' AudioPlayMode.Background)
+        'End If
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        MsgBox("This feature has been neutered from this version of Vanity Launcher, Sorry! Error 9000", vbMsgBoxHelp)
+    Private Sub VPLaunch_Click(sender As Object, e As EventArgs) Handles VPLaunch.Click
+        If LocVars.VPLocation = ("undefined") Then
+            ErrorBox.Show()
+            ErrorBox.MessageLabel.Text = ("An error has occurred, please try again. 
+If this error persists, please send a screenshot 
+of this window to the developers at 
+jebcraftgroup@gmail.com 
+- 
+Error 
+" & "300")
+        Else
+            Process.Start(LocVars.VPLocation)
+        End If
+
     End Sub
 
     Private Sub ConfigureButton_Click(sender As Object, e As EventArgs) Handles ConfigureButton.Click
         Configure.Show()
+        Configure.UsernameTextBox.Text = (LocVars.VPLocation)
     End Sub
     Private Sub ConfigureButton_MouseHover(sender As Object, e As EventArgs) Handles ConfigureButton.MouseHover
         My.Computer.Audio.Play("C:\Users\jebob\Desktop\Code Projects\burnout-paradise-fansite-kit\Audio\SelectSound.wav",
     AudioPlayMode.Background)
     End Sub
-    Private Sub Button3_MouseHover(sender As Object, e As EventArgs) Handles Button3.MouseHover
+    Private Sub Button3_MouseHover(sender As Object, e As EventArgs) Handles VPLaunch.MouseHover
         My.Computer.Audio.Play("C:\Users\jebob\Desktop\Code Projects\burnout-paradise-fansite-kit\Audio\SelectSound.wav",
     AudioPlayMode.Background)
     End Sub
@@ -31,6 +47,20 @@ Public Class Form1
     AudioPlayMode.Background)
     End Sub
     Private Sub CheckVar_Click(sender As Object, e As EventArgs)
-        MsgBox(GlobalVariables.ConfClose, vbOKOnly)
+        'MsgBox(GlobalVariables.ConfClose, vbOKOnly)
+    End Sub
+    Private Sub DebugButton_MouseHover(sender As Object, e As EventArgs) Handles DebugButton.MouseHover
+        My.Computer.Audio.Play("C:\Users\jebob\Desktop\Code Projects\burnout-paradise-fansite-kit\Audio\SelectSound.wav",
+    AudioPlayMode.Background)
+    End Sub
+    Private Sub DebugButton_Click(sender As Object, e As EventArgs) Handles DebugButton.Click
+        ErrorBox.Show()
+        ErrorBox.MessageLabel.Text = ("An error has occurred, please try again. 
+If this error persists, please send a screenshot 
+of this window to the developers at 
+jebcraftgroup@gmail.com 
+- 
+Error 
+" & "DebugTest")
     End Sub
 End Class

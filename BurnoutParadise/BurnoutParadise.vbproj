@@ -17,18 +17,21 @@
     <PublishUrl>C:\Users\jebob\Desktop\Code Projects\burnout-paradise-vanity-launcher\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>https://github.com/jebobs/jebcraftvanitylauncher/</UpdateUrl>
     <ProductName>Burnout Paradise Vanity Launcher</ProductName>
     <PublisherName>JEBCraft Studios</PublisherName>
     <SuiteName>Vanity Pack</SuiteName>
     <MinimumRequiredVersion>0.1.0001.3</MinimumRequiredVersion>
-    <ApplicationRevision>4</ApplicationRevision>
+    <WebPage>publish.htm</WebPage>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>0.1.0001.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -117,6 +120,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="DebugMenu.Designer.vb">
+      <DependentUpon>DebugMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DebugMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocVars.vb" />
     <Compile Include="Configure.Designer.vb">
       <DependentUpon>Configure.vb</DependentUpon>
     </Compile>
@@ -128,6 +138,12 @@
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm1.Designer.vb">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -156,8 +172,14 @@
     <EmbeddedResource Include="Configure.resx">
       <DependentUpon>Configure.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DebugMenu.resx">
+      <DependentUpon>DebugMenu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm1.resx">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -194,7 +216,9 @@
     <Content Include="Burnout Textsel.cur" />
     <Content Include="Burnout WHITE.cur" />
     <Content Include="Hunter.ico" />
+    <None Include="Resources\25.jpg" />
     <Content Include="Resources\BackSound.wav" />
+    <None Include="Resources\CrashingError.png" />
     <Content Include="Resources\OkBackSounds.mp3" />
     <None Include="Resources\11.jpg" />
     <None Include="Resources\7.jpg" />
