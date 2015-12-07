@@ -54,13 +54,6 @@ Error
     AudioPlayMode.Background)
     End Sub
     Private Sub DebugButton_Click(sender As Object, e As EventArgs) Handles DebugButton.Click
-        ErrorBox.Show()
-        ErrorBox.MessageLabel.Text = ("An error has occurred, please try again. 
-If this error persists, please send a screenshot 
-of this window to the developers at 
-jebcraftgroup@gmail.com 
-- 
-Error 
-" & "DebugTest")
+        DebugMenu.Show()
     End Sub
 End Class

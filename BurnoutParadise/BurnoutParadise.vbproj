@@ -206,6 +206,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\DEFTONE.TTF" />
     <None Include="Resources\Metal-Scratches-Steel-Surface-Background-Gray-Color-WallpapersByte-com-3840x2400.jpg" />
   </ItemGroup>
   <ItemGroup>
