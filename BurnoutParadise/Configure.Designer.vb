@@ -36,11 +36,13 @@ Partial Class Configure
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.OK = New System.Windows.Forms.Button()
         Me.Cancel = New System.Windows.Forms.Button()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.FolderBrowserDialog = New System.Windows.Forms.OpenFileDialog()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.FolderBrowserDialog2 = New System.Windows.Forms.FolderBrowserDialog()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -97,8 +99,8 @@ Partial Class Configure
         '
         'OpenFileDialog1
         '
-        Me.OpenFileDialog1.FileName = "EXE Files (.exe)"
-        Me.OpenFileDialog1.Tag = "EXE Files (.exe)"
+        Me.FolderBrowserDialog.FileName = "VanityPack.exe"
+        Me.FolderBrowserDialog.Tag = "VanityPack.exe"
         '
         'Button1
         '
@@ -163,8 +165,10 @@ Partial Class Configure
 
     End Sub
 
-    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents FolderBrowserDialog As OpenFileDialog
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents OpenFileDialog2 As OpenFileDialog
+    Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
+    Friend WithEvents FolderBrowserDialog2 As FolderBrowserDialog
 End Class
